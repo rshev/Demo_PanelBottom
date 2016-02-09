@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xSY-09-vvR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ktu-fk-MD9">
+                                    <size key="itemSize" width="324" height="618"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="image" id="g8F-YD-jA7" customClass="ImageCollectionViewCell" customModule="testPanelBottom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="14.5" width="324" height="618"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="618"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Lh-qc-uQm">
+                                                    <rect key="frame" x="8" y="8" width="308" height="602"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="8Lh-qc-uQm" firstAttribute="top" secondItem="g8F-YD-jA7" secondAttribute="topMargin" id="5ee-je-P40"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="8Lh-qc-uQm" secondAttribute="bottom" id="UiB-zj-V1T"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="8Lh-qc-uQm" secondAttribute="trailing" id="Zd8-84-ITJ"/>
+                                            <constraint firstItem="8Lh-qc-uQm" firstAttribute="leading" secondItem="g8F-YD-jA7" secondAttribute="leadingMargin" id="yRr-MX-98O"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="8Lh-qc-uQm" id="eD4-aQ-7RN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8qO-Ai-veV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gCP-fO-3at"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xSY-09-vvR" secondAttribute="bottom" id="6Ua-G9-Ycx"/>
+                            <constraint firstAttribute="trailing" secondItem="xSY-09-vvR" secondAttribute="trailing" id="Lfg-Wk-p0g"/>
+                            <constraint firstItem="xSY-09-vvR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XSA-qE-yD1"/>
+                            <constraint firstItem="xSY-09-vvR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cbT-b8-GUD"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collectionView" destination="xSY-09-vvR" id="a81-Je-r2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="344.5" y="388.5"/>
         </scene>
     </scenes>
 </document>
