@@ -12,6 +12,7 @@
 		643B79F61C6A060E00ACB7BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643B79F41C6A060E00ACB7BB /* Main.storyboard */; };
 		643B79F81C6A060E00ACB7BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643B79F71C6A060E00ACB7BB /* Assets.xcassets */; };
 		643B79FB1C6A060E00ACB7BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643B79F91C6A060E00ACB7BB /* LaunchScreen.storyboard */; };
+		643B7A031C6A064C00ACB7BB /* SomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643B7A021C6A064C00ACB7BB /* SomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		643B79F71C6A060E00ACB7BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		643B79FA1C6A060E00ACB7BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		643B79FC1C6A060E00ACB7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		643B7A021C6A064C00ACB7BB /* SomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				643B79F01C6A060E00ACB7BB /* AppDelegate.swift */,
 				643B79F21C6A060E00ACB7BB /* ViewController.swift */,
+				643B7A021C6A064C00ACB7BB /* SomeModel.swift */,
 				643B79F41C6A060E00ACB7BB /* Main.storyboard */,
 				643B79F71C6A060E00ACB7BB /* Assets.xcassets */,
 				643B79F91C6A060E00ACB7BB /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				643B79F31C6A060E00ACB7BB /* ViewController.swift in Sources */,
 				643B79F11C6A060E00ACB7BB /* AppDelegate.swift in Sources */,
+				643B7A031C6A064C00ACB7BB /* SomeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
