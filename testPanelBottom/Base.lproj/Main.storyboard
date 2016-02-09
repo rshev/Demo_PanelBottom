@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -57,18 +58,62 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gCP-fO-3at"/>
                                 </connections>
                             </collectionView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ang-Xn-brm">
+                                <rect key="frame" x="0.0" y="517" width="375" height="767"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-eW-cRM">
+                                        <rect key="frame" x="10" y="10" width="66" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Z3-ty-LLx">
+                                        <rect key="frame" x="10" y="49" width="355" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0V-6r-gIh">
+                                        <rect key="frame" x="10" y="49" width="355" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="i0V-6r-gIh" firstAttribute="trailing" secondItem="8Z3-ty-LLx" secondAttribute="trailing" id="HBT-7H-oVN"/>
+                                    <constraint firstItem="k7q-eW-cRM" firstAttribute="leading" secondItem="Ang-Xn-brm" secondAttribute="leading" constant="10" id="MLN-5t-juN"/>
+                                    <constraint firstItem="8Z3-ty-LLx" firstAttribute="top" secondItem="k7q-eW-cRM" secondAttribute="bottom" constant="10" id="P7J-eb-ufU"/>
+                                    <constraint firstItem="k7q-eW-cRM" firstAttribute="top" secondItem="Ang-Xn-brm" secondAttribute="top" constant="10" id="TjM-Lh-uYd"/>
+                                    <constraint firstItem="i0V-6r-gIh" firstAttribute="top" secondItem="8Z3-ty-LLx" secondAttribute="top" id="Zg7-CN-QWX"/>
+                                    <constraint firstItem="8Z3-ty-LLx" firstAttribute="leading" secondItem="k7q-eW-cRM" secondAttribute="leading" id="cu7-oo-PIE"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Z3-ty-LLx" secondAttribute="trailing" constant="10" id="dZr-Tm-ECE"/>
+                                    <constraint firstItem="i0V-6r-gIh" firstAttribute="leading" secondItem="8Z3-ty-LLx" secondAttribute="leading" id="hTl-mk-aEg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ang-Xn-brm" secondAttribute="trailing" id="41v-PO-ye1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xSY-09-vvR" secondAttribute="bottom" id="6Ua-G9-Ycx"/>
                             <constraint firstAttribute="trailing" secondItem="xSY-09-vvR" secondAttribute="trailing" id="Lfg-Wk-p0g"/>
+                            <constraint firstItem="Ang-Xn-brm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" constant="-150" id="Syp-Jo-ypO"/>
                             <constraint firstItem="xSY-09-vvR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XSA-qE-yD1"/>
                             <constraint firstItem="xSY-09-vvR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cbT-b8-GUD"/>
+                            <constraint firstItem="Ang-Xn-brm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uuh-Nc-PAB"/>
+                            <constraint firstItem="Ang-Xn-brm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="100" id="xHL-3J-TkB"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="xSY-09-vvR" id="a81-Je-r2h"/>
+                        <outlet property="longTextLabel" destination="i0V-6r-gIh" id="Esr-Gh-4DR"/>
+                        <outlet property="nameLabel" destination="k7q-eW-cRM" id="L79-AQ-kvg"/>
+                        <outlet property="panelView" destination="Ang-Xn-brm" id="A7v-Wr-NwJ"/>
+                        <outlet property="panelViewTopConstraint" destination="Syp-Jo-ypO" id="SOw-kE-mU5"/>
+                        <outlet property="summaryLabel" destination="8Z3-ty-LLx" id="PBN-hu-Jch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
